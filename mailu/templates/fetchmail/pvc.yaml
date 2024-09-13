@@ -1,5 +1,5 @@
 ---
-{{- if and (.Values.fetchmail.enabled) (not .Values.persistence.single_pvc) }}
+{{- if and (.Values.fetchmail.enabled) (not .Values.persistence.single_pvc) (not .Values.fetchmail.persistence.existingClaim) }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
