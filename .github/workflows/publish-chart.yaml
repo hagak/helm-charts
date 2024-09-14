@@ -63,7 +63,7 @@ jobs:
         uses: octokit/request-action@v2.x
         id: get_release
         with:
-          route: GET /repos/hagak/helm-charts/releases/tags/mailu-v2.2.0
+          route: GET /hagak/helm-charts/releases/tag/v2.2.0
           # repo: ${{ github.repository }}
           # tag: ${{ github.event.inputs.package }}-${{ github.event.inputs.version }}
         env:
