@@ -65,7 +65,7 @@ jobs:
         with:
           route: GET /repos/{repo}/releases/tags/{tag}
           repo: ${{ github.repository }}
-          tag: ${{ github.event.inputs.package }}-${{ github.event.inputs.version }}
+          tag: ${{ github.event.inputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
