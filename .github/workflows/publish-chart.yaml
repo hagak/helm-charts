@@ -65,7 +65,7 @@ jobs:
         with:
           route: GET /repos/{repo}/releases/tags/{tag}
           repo: ${{ github.repository }}
-          tag: ${{ github.event.inputs.version }}
+          tag: ${{ github.event.inputs.package }}-${{ github.event.inputs.version }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -84,7 +84,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "Github actions"
           REPO_NAME=$(echo "${{ github.repository }}" | cut -d "/" -f 2)
-          cr -t $GITHUB_TOKEN index -o ${{ github.repository_owner }} -r ${REPO_NAME} -i gh-pages/index.yaml --release-name-template "{{ .Version }}"
+          cr -t $GITHUB_TOKEN index -o ${{ github.repository_owner }} -r ${REPO_NAME} -i gh-pages/index.yaml --release-name-template "{{ .Name }}-{{ .Version }}"
           cd gh-pages
           git add .
           git commit -m "New Chart Release for ${{ github.event.inputs.package }}: ${{ github.event.inputs.version }}"
