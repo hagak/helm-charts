@@ -90,5 +90,5 @@ entries:
     - https://github.com/Mailu/helm-charts/
     urls:
     - https://github.com/hagak/helm-charts/releases/download/mailu-2.1.1/mailu-2.1.1.tgz
-    version: 2.1.1
+    version: v2.1.1
 generated: "2024-09-15T13:48:08.631567434Z"
