@@ -325,6 +325,14 @@ Check that the deployed pods are all running.
 | `front.externalService.ports.smtps`           | Expose SMTP port (TLS) - 465/tcp                                                      | `true`          |
 | `front.externalService.ports.submission`      | Expose Submission port - 587/tcp                                                      | `false`         |
 | `front.externalService.ports.manageSieve`     | Expose ManageSieve port - 4190/tcp                                                    | `true`          |
+| `front.externalService.nodePorts.pop3`        | NodePort to use for POP3 (defaults to 110/tcp)                                        | `110`           |
+| `front.externalService.nodePorts.pop3s`       | NodePort to use for POP3 (TLS) (defaults to 995/tcp)                                  | `995`           |
+| `front.externalService.nodePorts.imap`        | NodePort to use for IMAP (defaults to 143/tcp)                                        | `143`           |
+| `front.externalService.nodePorts.imaps`       | NodePort to use for IMAP (TLS) (defaults to 993/tcp)                                  | `993`           |
+| `front.externalService.nodePorts.smtp`        | NodePort to use for SMTP (defaults to 25/tcp)                                         | `25`            |
+| `front.externalService.nodePorts.smtps`       | NodePort to use for SMTP (TLS) (defaults to 465/tcp)                                  | `465`           |
+| `front.externalService.nodePorts.submission`  | NodePort to use for Submission (defaults to 587/tcp)                                  | `587`           |
+| `front.externalService.nodePorts.manageSieve` | NodePort to use for ManageSieve (defaults to 4190/tcp)                                | `4190`          |
 | `front.kind`                                  | Kind of resource to create for the front (`Deployment` or `DaemonSet`)                | `Deployment`    |
 | `front.replicaCount`                          | Number of front replicas to deploy (only for `Deployment` kind)                       | `1`             |
 | `front.resources.limits`                      | The resources limits for the container                                                | `{}`            |
@@ -449,7 +457,7 @@ Check that the deployed pods are all running.
 | `redis.master.persistence.accessModes`   | Pod pvc access modes                                                | `["ReadWriteOnce"]` |
 | `redis.master.persistence.annotations`   | Pod pvc annotations                                                 | `{}`                |
 | `redis.master.persistence.existingClaim` | Pod pvc existing claim; necessary if using single_pvc               | `""`                |
-| `redis.master.persistence.subPath`       | Subpath in PVC; necessary if using single_pvc (set it to `/redis`)  | `""`                |
+| `redis.master.persistence.subPath`       | Subpath in PVC; necessary if using single_pvc (set it to `redis`)   | `""`                |
 | `redis.replica.count`                    | Number of redis replicas (only if `redis.architecture=replication`) | `0`                 |
 
 ### Postfix parameters
