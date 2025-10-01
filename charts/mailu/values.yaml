@@ -971,6 +971,7 @@ admin:
     accessModes: [ReadWriteOnce]
     claimNameOverride: ""
     annotations: {}
+    existingClaim: ""
 
   ## Pod resource requests and limits
   ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
@@ -1239,6 +1240,7 @@ postfix:
     accessModes: [ReadWriteOnce]
     claimNameOverride: ""
     annotations: {}
+    existingClaim: ""
 
   ## Pod resource requests and limits
   ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
@@ -1447,6 +1449,7 @@ dovecot:
     accessModes: [ReadWriteOnce]
     claimNameOverride: ""
     annotations: {}
+    existingClaim: ""
 
   ## Pod resource requests and limits
   ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
@@ -1769,6 +1772,7 @@ rspamd:
     accessModes: [ReadWriteOnce]
     claimNameOverride: ""
     annotations: {}
+    existingClaim: ""
 
   ## Pod resource requests and limits
   ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
@@ -1909,6 +1913,7 @@ rspamd:
   service:
     ## @param rspamd.service.annotations Rspamd service annotations
     annotations: {}
+
 
   # Service monitor parameters
   serviceMonitor:
@@ -2249,6 +2254,7 @@ webmail:
     accessModes: [ReadWriteOnce]
     claimNameOverride: ""
     annotations: {}
+    existingClaim: ""
 
   ## Pod resource requests and limits
   ## ref: https://kubernetes.io/docs/user-guide/compute-resources/
