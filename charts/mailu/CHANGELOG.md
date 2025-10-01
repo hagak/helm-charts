@@ -1,5 +1,31 @@
 # Changelog
 
+## [2.2.1](https://github.com/hagak/helm-charts/compare/mailu-v2.4.0...mailu-2.2.1) (2025-10-01)
+
+
+### Features
+
+* ✨ move chart to subdir charts ([#389](https://github.com/hagak/helm-charts/issues/389)) ([123f5d9](https://github.com/hagak/helm-charts/commit/123f5d91011fc92ba2bd23c7d1f5e3c80d272894))
+* add metrics monitoring for rspamd and dovecot ([#461](https://github.com/hagak/helm-charts/issues/461)) ([7d4995e](https://github.com/hagak/helm-charts/commit/7d4995ecc126850ef49a75dfea06a3ddc0c4b6d2))
+* bump mailu version to 2024.06.41 ([#431](https://github.com/hagak/helm-charts/issues/431)) ([350a7dc](https://github.com/hagak/helm-charts/commit/350a7dc7a310b212be2f1b12fdcc56cb63875f27))
+
+
+### Bug Fixes
+
+* bump mailu version to 2024.06.43 ([#436](https://github.com/hagak/helm-charts/issues/436)) ([8e2c69d](https://github.com/hagak/helm-charts/commit/8e2c69dfb2511f78cfed8888ab82a1d79027342e))
+* fix proxy protocol check ([#414](https://github.com/hagak/helm-charts/issues/414)) ([47344b0](https://github.com/hagak/helm-charts/commit/47344b0e6e69879fa4c749d6433ceb53afe4529d))
+* pin tika image to 3.2.2.0-full ([#435](https://github.com/hagak/helm-charts/issues/435)) ([5f1b283](https://github.com/hagak/helm-charts/commit/5f1b28305adc06b139c0c2d708f722a441c2850c))
+* remove deprecated common template (fixes [#449](https://github.com/hagak/helm-charts/issues/449)) ([#451](https://github.com/hagak/helm-charts/issues/451)) ([a59ef5c](https://github.com/hagak/helm-charts/commit/a59ef5c874e3906eb0f8508e44da21aab88109bf))
+* remove env vars from clamav, oletools and tika pods ([#428](https://github.com/hagak/helm-charts/issues/428)) ([45313d5](https://github.com/hagak/helm-charts/commit/45313d509a87f79c4aabd9e7ddd8d3fc4faa35fd))
+* restrict tika and oletools internet access ([#432](https://github.com/hagak/helm-charts/issues/432)) ([87ced8f](https://github.com/hagak/helm-charts/commit/87ced8f42fb854d27ff26d42e1e8c064224672e0))
+* update bitnami dependencies and use bitnamilegacy repo ([#434](https://github.com/hagak/helm-charts/issues/434)) ([abe1a34](https://github.com/hagak/helm-charts/commit/abe1a34ff0364fcc6d6285445d4c0b359aa82d3b))
+* update tika (CVE-2025-54988) ([#430](https://github.com/hagak/helm-charts/issues/430)) ([d0b8bdf](https://github.com/hagak/helm-charts/commit/d0b8bdfc9971501c913b3ed1eebcd4e48a6bda87))
+
+
+### Miscellaneous Chores
+
+* trigger release ([58fc24b](https://github.com/hagak/helm-charts/commit/58fc24b2b80fc8f76115f952e2d07e607acd3071))
+
 ## [2.4.0](https://github.com/Mailu/helm-charts/compare/mailu-2.3.1...mailu-2.4.0) (2025-09-05)
 
 
