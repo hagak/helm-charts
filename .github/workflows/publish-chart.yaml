@@ -1,8 +1,12 @@
 ---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: release-pipeline
 
 permissions:
+  id-token: write
   contents: write
+  attestations: write
+  # packages: write
 
 on:
   workflow_dispatch:
@@ -30,6 +34,10 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
         with:
           fetch-depth: 0
+
+      - name: Extract chart name
+        id: extract_chart_name
+        run: echo "chart_name=$(basename '${{ github.event.inputs.package }}')" >> "$GITHUB_OUTPUT"
 
       - name: Checkout Github Pages to gh-pages folder
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
@@ -61,6 +69,7 @@ jobs:
       - name: Package Chart with chart-releaser
         run: |
           cr package ${{ github.event.inputs.package }}
+
       # - name: Login to OCI registry (ghcr.io)
       #   run: |
       #     echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ${{ env.OCI_REGISTRY }} --username "${{ github.actor }}" --password-stdin
