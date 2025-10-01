@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.1](https://github.com/hagak/helm-charts/compare/mailu-2.4.0...mailu-2.4.1) (2025-10-01)
+
+
+### Miscellaneous Chores
+
+* trigger release ([9df77cf](https://github.com/hagak/helm-charts/commit/9df77cffb0e47271fba9a2e79ea78e939665e077))
+
 ## [2.4.0](https://github.com/Mailu/helm-charts/compare/mailu-2.3.1...mailu-2.4.0) (2025-09-05)
 
 
